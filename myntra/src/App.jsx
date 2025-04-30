@@ -1,6 +1,5 @@
 
 import Header from './components/Header.jsx'
-import Slidebar from './components/Slidebar.jsx'
 import { Route, Routes } from 'react-router'
 import Login from './pages/Login.jsx'
 import { createContext,useEffect,useState } from 'react'
@@ -8,6 +7,7 @@ import { useLocation } from 'react-router'
 import VerifyOtp from './pages/VerifyOtp.jsx'
 import Home from './pages/Home.jsx'
 import EditProfile from './pages/EditProfile.jsx'
+import ShowItems from './pages/ShowItems.jsx'
 
 
 export const MyContext=createContext()
@@ -16,6 +16,8 @@ function App() {
 
   const [isLogin,setIsLogin]=useState(false)
   const[isOtpverified,setIsOtpverified]=useState(false)
+  const[isItem,setIsItem]=useState(null)
+  const[isTrue,setIsTrue]=useState(false)
   // if(location.pathname!=="/login"){
   //   setIsLogin(false)
   // }
@@ -48,7 +50,11 @@ function App() {
     isLogin,
     setIsLogin,
     isOtpverified,
-    setIsOtpverified
+    setIsOtpverified,
+    isItem,
+    setIsItem,
+    isTrue,
+    setIsTrue
   }
 
   return (
@@ -68,6 +74,7 @@ function App() {
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/profile/edit" element={<EditProfile/>}></Route>
         <Route path="/verify-otp" element={<VerifyOtp/>}></Route>
+        <Route path="/men-topswear" element={<ShowItems/>}></Route>
       </Routes>
     </main>
     </div>

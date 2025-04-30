@@ -127,7 +127,7 @@ onMouseLeave={handleCloseMen}
     <div className='h-100 w-54 pt-4 pl-5 text-left '>
 
       <ul className='list-none '>
-        <li className='text-xs text-left font-bold hover:cursor-pointer text-[#ee6780]'>Top wears</li>
+       <Link to="/men-topswear"> <li className='text-xs text-left font-bold hover:cursor-pointer text-[#ee6780]'>Top wears</li></Link>
         <li className='text-xs mt-2 hover:font-bold  hover:cursor-pointer text-gray-600'>T-shirts</li>
         <li className='text-xs mt-2 hover:font-bold  hover:cursor-pointer text-gray-600'>Casual shirts</li>
         <li className='text-xs mt-2 hover:font-bold  hover:cursor-pointer text-gray-600'>Formal</li>
